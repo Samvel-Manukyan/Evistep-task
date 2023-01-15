@@ -1,0 +1,24 @@
+@import '/public/assets/styles/variables';
+
+.companies {
+  width: 75%;
+  margin: 180px auto;
+  .companies-title {
+    display: block;
+    text-align: center;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 42px;
+    letter-spacing: 0.007em;
+    color: $textColor;
+  }
+  .logos {
+    margin-top: 87px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}

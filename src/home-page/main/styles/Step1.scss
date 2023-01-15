@@ -1,0 +1,71 @@
+@import "/public/assets/styles/variables";
+
+.step-1 {
+  @include displayContent(flex, space-around, flex-start);
+  margin-top: 80px;
+  .description-block {
+    .step-1-title {
+      display: block;
+      width: 650px;
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 39px;
+      line-height: 52px;
+      letter-spacing: 0.007em;
+      color: $textColor;
+    }
+
+    .text {
+      margin-top: 30px;
+      .time-data {
+        width: 220px;
+        @include displayContent(flex, flex-start, center);
+
+        img {
+          width: 14px;
+          height: 10px;
+        }
+        span {
+          margin-left: 10px;
+          font-family: $fontFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 38px;
+          letter-spacing: 0.007em;
+          color: $textColor;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 41px;
+    }
+  }
+
+  .img-block {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .step-1 {
+    @include displayDirection(flex, column, flex-start);
+    padding: 0 0 0 50px;
+
+    .description-block {
+      .step-1-title {
+        width: 300px;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+
+    .img-block {
+      img {
+        width: 200px;
+      }
+    }
+  }
+}

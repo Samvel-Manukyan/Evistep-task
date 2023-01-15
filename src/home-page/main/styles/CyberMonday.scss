@@ -1,0 +1,186 @@
+@import "/public/assets/styles/variables";
+
+.cyber-monday {
+  width: 85%;
+  margin: 163px auto;
+  @include displayContent(flex, space-between, flex-start);
+  .description {
+    @include displayDirection(flex, column, flex-start);
+
+    span {
+      color: $textColor;
+    }
+
+    .text-cyber {
+      width: 247px;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin-top: 41px;
+    }
+
+    .title {
+      width: 580px;
+      height: 138px;
+      color: $textColor;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 49px;
+      line-height: 69px;
+      letter-spacing: 0.007em;
+
+      span {
+        color: #FFC759;
+      }
+    }
+
+    .free-trial {
+      @include displayContent(flex, sapce-between, center);
+      margin-top: 20px;
+
+      img {
+        width: 16.82px;
+        height: 17px;
+      }
+
+      span {
+        font-size: 15px;
+        margin-left: 10px;
+        font-family: $fontFamily;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    .reviews {
+      @include displayContent(flex, sapce-between, center);
+      margin-top: 64px;
+
+      img {
+        width: 51.81px;
+        height: 19.65px;
+      }
+      span {
+        margin-left: 5px;
+        font-family: $fontFamily;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+      }
+    }
+
+    .icons {
+      @include displayContent(flex, space-between, center);
+      margin-top: 35px;
+      img {
+        margin-right: 27px;
+      }
+
+      .capterra {
+        width: 117.23px;
+        height: 24.95px;
+      }
+
+      .gicrowd {
+        width: 101.96px;
+        height: 27.07px;
+      }
+
+      .getapp {
+        width: 117.99px;
+        height: 49.36px;
+      }
+    }
+  }
+
+  .fifty-percent-img {
+    margin-top: -50px;
+    img {
+      width: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cyber-monday {
+    margin-top: 20px;
+
+    .description {
+      .title {
+        height: 60px;
+        width: 300px;
+        font-size: 20px;
+        line-height: 40px;
+        span {
+          font-size: 20px;
+        }
+      }
+
+      .text-cyber {
+        text-align: start;
+      }
+
+      .icons {
+        img {
+          max-width: 70px;
+        }
+      }
+    }
+
+    .fifty-percent-img {
+      img{
+        width: 450px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .cyber-monday {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(180deg);
+
+    .description {
+      @include displayContent(flex, center, center);
+      transform: rotate(180deg);
+
+      .title {
+        height: 60px;
+        text-align: center;
+        margin: 30px auto;
+        width: 300px;
+        font-size: 20px;
+        line-height: 40px;
+        span {
+          font-size: 20px;
+        }
+      }
+
+      .text-cyber {
+        text-align: center;
+      }
+
+      .icons {
+        img {
+          max-width: 70px;
+        }
+      }
+    }
+
+    .fifty-percent-img {
+      transform: rotate(180deg);
+      margin: 0 auto;
+
+      img{
+        width: 300px;
+      }
+    }
+  }
+}

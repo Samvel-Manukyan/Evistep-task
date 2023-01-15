@@ -1,0 +1,26 @@
+@import "/public/assets/styles/variables";
+
+.custom-button {
+  @include displayContent(flex, center, center);
+  height: 54px;
+  background: #8276FF;
+  border-radius: 31.0938px;
+  color: $textColor;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .custom-button {
+    width: 150px!important;
+    height: 40px;
+    font-size: 12px!important;
+    font-weight: 400;
+  }
+}

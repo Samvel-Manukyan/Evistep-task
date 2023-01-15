@@ -1,0 +1,97 @@
+@import "/public/assets/styles/variables";
+
+.benefit-both {
+  width: 85%;
+  margin: 0 auto;
+  .benefit-both-title {
+    text-align: center;
+    font-family: $fontFamily;
+    margin: 214.11px auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 52px;
+    letter-spacing: 0.007em;
+    color: $textColor;
+  }
+
+  .custom-card-block {
+    @include displayContent(flex, space-between, center);
+
+    .percents {
+      @include displayDirection(flex, column, start);
+      .small-percent {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .awards {
+    @include displayContent(flex, center, center);
+    margin: 200px auto;
+    width: 100%;
+    img {
+      width: calc(100%);
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .benefit-both {
+    .awards {
+      height: 150px;
+      margin-top: 50px;
+      transform: scale(0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .benefit-both {
+    .awards {
+      transform: scale(0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .benefit-both {
+    .awards {
+      height: 50px;
+      transform: scale(0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .benefit-both {
+    margin-top: 0;
+    .benefit-both-title {
+      text-align: center;
+      font-family: $fontFamily;
+      margin: 100.11px auto;
+      font-size: 39px;
+      color: $textColor;
+    }
+    .custom-card-block {
+      @include displayDirection(flex, column, center);
+      gap: 60px;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .benefit-both {
+    .custom-card-block {
+      @include displayDirection(flex, column, center);
+      gap: 60px;
+
+      .percents {
+        .small-percent {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

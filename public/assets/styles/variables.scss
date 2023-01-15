@@ -1,7 +1,15 @@
 $primaryColor: #8276FF;
+$textColor: #FFFFFF;
+$fontFamily: 'Source Sans Pro';
 
 @mixin displayContent($display, $justify-content, $align-items) {
   display: $display;
   justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin displayDirection($display, $flex-direction, $align-items) {
+  display: $display;
+  flex-direction: $flex-direction;
   align-items: $align-items;
 }

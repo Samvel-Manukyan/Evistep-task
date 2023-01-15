@@ -1,21 +1,47 @@
 @import "/public/assets/styles/variables";
 
 .header {
-  width: 100%;
-  margin-top: 27px;
+  width: 85%;
+  margin: 27px auto;
   @include displayContent(flex, space-between, center);
 
   img {
-    height: 36px;
-    width: 164px;
+    object-fit: contain;
+    width: 164.29px;
+    height: 36.86px;
   }
 
   button {
     width: 175px;
     height: 42px;
     background: none;
-    color: #FFFFFF;
+    color: $textColor;
     border: 1px solid #8276FF;
     border-radius: 131px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .header {
+    img {
+      object-fit: contain;
+      width: 124.29px;
+      height: 36.86px;
+    }
+
+    button {
+      width: 125px;
+      height: 32px;
+      background: none;
+      color: $textColor;
+      border: 1px solid #8276FF;
+      border-radius: 131px;
+      cursor: pointer;
+    }
   }
 }

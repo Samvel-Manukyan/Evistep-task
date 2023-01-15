@@ -1,0 +1,216 @@
+@import "/public/assets/styles/variables";
+
+.custom-card {
+  position: relative;
+  @include displayDirection(flex, column, center);
+  width: 537px;
+  min-width: 250px;
+  height: 586px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(141, 159, 244, 0.3);
+  backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+
+  span {
+    color: $textColor;
+  }
+
+  .fifty-percent {
+    @include displayDirection(flex, column, center);
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    width: 123px;
+    height: 104px;
+    font-family: 'Design';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    color: $textColor;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
+
+  .round {
+    min-width: 10px;
+    width: 220px;
+    position: absolute;
+    top: -65px;
+    left: 70%;
+  }
+
+  .old-price {
+    position: absolute;
+    top: 28%;
+    right: 75%;
+
+    .line {
+      position: absolute;
+      top: 18px;
+      width: 74.55px;
+      height: 3px;
+      background: #F354B4;
+      transform: matrix(0.96, -0.27, -0.27, -0.96, 0, 0);
+    }
+    span{
+      width: 73px;
+      height: 59px;
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 31px;
+      letter-spacing: 0.007em;
+      color: $textColor;
+    }
+  }
+
+  .custom-card-title {
+    margin-top: 53px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 52px;
+    letter-spacing: 0.007em;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .price-block {
+    @include displayDirection(flex, column, center);
+    margin-top: 50px;
+    .price {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      letter-spacing: 0.007em;
+      color: $textColor;
+    }
+
+    .month {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      letter-spacing: 0.007em;
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  .description-block {
+    margin-top: 18px;
+    @include displayDirection(flex, column, flex-start);
+
+    div {
+      @include displayContent(flex, space-between, center);
+
+      img {
+        width: 13.86px;
+        height: 10px;
+      }
+
+      .support {
+        width: 102.86px;
+        height: 49px;
+      }
+      span {
+        width: 138.56px;
+        height: 49px;
+        margin-left: 17.81px;
+        font-family: $fontFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.007em;
+        color: $textColor;
+      }
+    }
+  }
+
+  .custom-card-button {
+    margin-top: 49px;
+  }
+
+  .text {
+    position: absolute;
+    margin-top: 10px;
+    width: 150px;
+    top: 92%;
+    left: 78%;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.007em;
+    color: $textColor;
+  }
+}
+
+
+@media screen and (max-width: 656px) {
+  .custom-card {
+    width: 270px;
+    height: 500px;
+    .custom-card-title {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    .fifty-percent {
+      @include displayDirection(flex, column, center);
+      position: absolute;
+      top: 10px;
+      right: -30px;
+      width: 123px;
+      height: 104px;
+      font-size: 20px;
+      color: $textColor;
+      text-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .price-block {
+      .price {
+        margin-top: -20px;
+        font-size: 40px;
+      }
+      .month {
+        font-size: 20px;
+      }
+    }
+
+    .old-price {
+      position: absolute;
+      top: 24%;
+      right: 75%;
+
+      .line {
+        position: absolute;
+        top: 11px;
+        width: 40.55px;
+        height: 3px;
+        background: #F354B4;
+        transform: matrix(0.96, -0.27, -0.27, -0.96, 0, 0);
+      }
+      span{
+        font-size: 16px;
+        color: $textColor;
+      }
+    }
+    .round {
+      min-width: 10px;
+      width: 120px;
+      position: absolute;
+      top: -35px;
+      left: 68%;
+    }
+
+    .text {
+      position: absolute;
+      margin-top: 10px;
+      width: 90px;
+      top: 92%;
+      left: 65%;
+    }
+  }
+}

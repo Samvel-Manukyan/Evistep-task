@@ -1,0 +1,42 @@
+@import '/public/assets/styles/variables';
+
+.footer {
+  @include displayContent(flex, space-between, center);
+  width: 100%;
+  height: 382px;
+  background: linear-gradient(147.19deg, #362A87 -2.99%, #2C2747 82.25%, #4323F1 157.46%);
+
+  .save {
+    margin-left: 120px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 49px;
+    line-height: 62px;
+    letter-spacing: 0.007em;
+    color: $textColor;
+
+    .button {
+      margin-top: 30px;
+    }
+  }
+
+  .img-block {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .footer {
+    .save {
+      margin-left: 0;
+      font-size: 20px;
+
+      .button {
+        margin-top: 0;
+      }
+    }
+  }
+}
