@@ -1,0 +1,21 @@
+@import "/public/assets/styles/variables";
+
+.header {
+  width: 100%;
+  margin-top: 27px;
+  @include displayContent(flex, space-between, center);
+
+  img {
+    height: 36px;
+    width: 164px;
+  }
+
+  button {
+    width: 175px;
+    height: 42px;
+    background: none;
+    color: #FFFFFF;
+    border: 1px solid #8276FF;
+    border-radius: 131px;
+  }
+}
